@@ -40,14 +40,14 @@
 <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
 <script type="text/javascript">
     (function(){
-        emailjs.init("YOUR_PUBLIC_KEY"); // <-- Replace with your EmailJS public key
-    })();
+        emailjs.init("oxrJxNEDvsxboFV6x"); 
+   
 
     document.getElementById('contact-form').addEventListener('submit', function(event) {
         event.preventDefault(); // prevent page reload
 
         // Send email to your business email
-        emailjs.sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', this)
+        emailjs.sendForm('service_vjaopqc', 'template_ba0kks3', this)
             .then(function() {
                 alert('Thank you! Your message has been sent. We will contact you soon.');
             }, function(error) {
@@ -61,3 +61,4 @@
 
 </body>
 </html>
+
