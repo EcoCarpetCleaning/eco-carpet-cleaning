@@ -3,62 +3,151 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Eco Carpet Cleaning - Chicago</title>
+    <title>Eco Carpet Cleaning - Chicago, IL</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<!-- HEADER -->
-<header>
-    <h1>Eco Carpet Cleaning</h1>
-    <p>Professional & Eco-Friendly Carpet Cleaning in Chicago, Illinois</p>
-</header>
+    <!-- HEADER / HERO -->
+    <header class="hero">
+        <div class="overlay"></div>
+        <div class="hero-content">
+            <img src="images/logo.png" alt="Eco Carpet Cleaning Logo" class="logo">
+            <h1>Eco Carpet Cleaning</h1>
+            <p>Safe • Green • Powerful Carpet Care in Chicago, IL</p>
+            <a href="#contact" class="btn-primary">Book Now</a>
+        </div>
+    </header>
 
-<!-- SERVICES -->
-<section id="services" class="section">
-    <h2>Our Services</h2>
-    <ul>
-        <li>Residential Carpet Cleaning</li>
-        <li>Commercial Carpet Cleaning</li>
-        <li>Eco-Friendly & Non-Toxic Solutions</li>
-    </ul>
-</section>
+    <!-- ABOUT -->
+    <section id="about" class="section">
+        <h2>About Us</h2>
+        <p>
+            Eco Carpet Cleaning provides professional, eco-friendly cleaning solutions 
+            for homes and businesses. Our non-toxic products are safe for children, pets, 
+            and the environment — while delivering powerful results.
+        </p>
+    </section>
 
-<!-- CONTACT FORM -->
-<section id="contact" class="section">
-    <h2>Book a Cleaning</h2>
-    <form id="contact-form">
-        <input type="text" name="name" placeholder="Full Name" required>
-        <input type="email" name="email" placeholder="Email" required>
-        <input type="text" name="phone" placeholder="Phone Number" required>
-        <textarea name="message" placeholder="Describe your cleaning needs" required></textarea>
-        <button type="submit" class="btn-primary">Submit</button>
-    </form>
-</section>
+    <!-- SERVICES -->
+    <section id="services" class="section">
+        <h2>Our Services</h2>
+        <div class="service-grid">
 
-<!-- EMAILJS SCRIPT -->
-<script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
-<script type="text/javascript">
-    (function(){
-        emailjs.init("oxrJxNEDvsxboFV6x"); 
-   
+            <div class="service-card">
+                <h3>Residential Carpet Cleaning</h3>
+                <p>Deep cleaning for homes using eco-safe products.</p>
+            </div>
 
-    document.getElementById('contact-form').addEventListener('submit', function(event) {
-        event.preventDefault(); // prevent page reload
+            <div class="service-card">
+                <h3>Commercial Carpet Cleaning</h3>
+                <p>Large-scale cleaning for offices & facilities.</p>
+            </div>
 
-        // Send email to your business email
-        emailjs.sendForm('service_vjaopqc', 'template_ba0kks3', this)
-            .then(function() {
-                alert('Thank you! Your message has been sent. We will contact you soon.');
-            }, function(error) {
-                alert('Failed to send message. Please try again later.');
-                console.log(error);
-            });
+            <div class="service-card">
+                <h3>Upholstery Cleaning</h3>
+                <p>Restore sofas, chairs, and furniture fabrics.</p>
+            </div>
 
-        this.reset(); // clear form
-    });
-</script>
+            <div class="service-card">
+                <h3>Stain & Odor Removal</h3>
+                <p>Pet stains, spills, and tough odors eliminated.</p>
+            </div>
+
+            <div class="service-card">
+                <h3>Eco Deep Cleaning</h3>
+                <p>Non-toxic steam cleaning for maximum freshness.</p>
+            </div>
+
+            <div class="service-card">
+                <h3>Rug & Mat Cleaning</h3>
+                <p>Special care for delicate, high-quality rugs.</p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- PRICING -->
+    <section id="pricing" class="section">
+        <h2>Pricing</h2>
+        <div class="pricing-grid">
+
+            <div class="price-card">
+                <h3>Standard Clean</h3>
+                <p class="price">$79 / room</p>
+                <p>Eco-friendly cleaning for lightly soiled carpets.</p>
+            </div>
+
+            <div class="price-card">
+                <h3>Deep Clean</h3>
+                <p class="price">$119 / room</p>
+                <p>Full steam extraction for maximum dirt removal.</p>
+            </div>
+
+            <div class="price-card">
+                <h3>Upholstery</h3>
+                <p class="price">From $49</p>
+                <p>Cleaning for sofas, chairs, and cushions.</p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- GALLERY -->
+    <section id="gallery" class="section">
+        <h2>Before & After</h2>
+        <div class="gallery-grid">
+            <img src="images/carpet1.jpg" alt="Before Carpet Cleaning">
+            <img src="images/carpet2.jpg" alt="After Carpet Cleaning">
+            <img src="images/carpet3.jpg" alt="Before Carpet Cleaning">
+            <img src="images/carpet4.jpg" alt="After Carpet Cleaning">
+        </div>
+    </section>
+
+    <!-- REVIEWS -->
+    <section id="reviews" class="section">
+        <h2>Customer Reviews</h2>
+
+        <div class="review-card">
+            <p>“Amazing service! My carpets look brand new.”</p>
+            <span>- Sarah L.</span>
+        </div>
+
+        <div class="review-card">
+            <p>“Fast, friendly, and eco-friendly. Highly recommended!”</p>
+            <span>- Mark T.</span>
+        </div>
+
+        <div class="review-card">
+            <p>“Removed stains I thought were permanent.”</p>
+            <span>- Jasmine R.</span>
+        </div>
+    </section>
+
+    <!-- CONTACT FORM -->
+    <section id="contact" class="section">
+        <h2>Book a Cleaning</h2>
+        <form class="contact-form">
+            <input type="text" placeholder="Full Name" required>
+            <input type="email" placeholder="Email" required>
+            <input type="text" placeholder="Phone Number" required>
+            <textarea placeholder="Describe your cleaning needs" required></textarea>
+            <button type="submit" class="btn-primary">Submit</button>
+        </form>
+    </section>
+
+    <!-- GOOGLE MAPS -->
+    <section id="map" class="section">
+        <h2>Service Area</h2>
+        <iframe
+            src="https://www.google.com/maps/embed/v1/place?key=YOUR_API_KEY&q=Chicago+Illinois"
+            width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>© 2025 Eco Carpet Cleaning • All Rights Reserved • Chicago, IL</p>
+    </footer>
 
 </body>
 </html>
-
