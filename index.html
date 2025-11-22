@@ -125,16 +125,17 @@
     </section>
 
     <!-- CONTACT FORM -->
-    <section id="contact" class="section">
-        <h2>Book a Cleaning</h2>
-        <form class="contact-form">
-            <input type="text" placeholder="Full Name" required>
-            <input type="email" placeholder="Email" required>
-            <input type="text" placeholder="Phone Number" required>
-            <textarea placeholder="Describe your cleaning needs" required></textarea>
-            <button type="submit" class="btn-primary">Submit</button>
-        </form>
-    </section>
+<section id="contact" class="section">
+    <h2>Book a Cleaning</h2>
+    <form class="contact-form" action="https://formspree.io/f/mankbldq" method="POST">
+        <input type="text" name="name" placeholder="Full Name" required>
+        <input type="email" name="email" placeholder="Email" required>
+        <input type="text" name="phone" placeholder="Phone Number" required>
+        <textarea name="message" placeholder="Describe your cleaning needs" required></textarea>
+        <button type="submit" class="btn-primary">Submit</button>
+    </form>
+</section>
+
 
     <!-- GOOGLE MAPS -->
     <section id="map" class="section">
@@ -151,3 +152,4 @@
 
 </body>
 </html>
+
