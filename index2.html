@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eco Carpet Cleaning - Chicago</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- HEADER -->
+<header>
+    <h1>Eco Carpet Cleaning</h1>
+    <p>Professional & Eco-Friendly Carpet Cleaning in Chicago, Illinois</p>
+</header>
+
+<!-- SERVICES -->
+<section id="services" class="section">
+    <h2>Our Services</h2>
+    <ul>
+        <li>Residential Carpet Cleaning</li>
+        <li>Commercial Carpet Cleaning</li>
+        <li>Eco-Friendly & Non-Toxic Solutions</li>
+    </ul>
+</section>
+
+<!-- CONTACT FORM -->
+<section id="contact" class="section">
+    <h2>Book a Cleaning</h2>
+    <form id="contact-form">
+        <input type="text" name="name" placeholder="Full Name" required>
+        <input type="email" name="email" placeholder="Email" required>
+        <input type="text" name="phone" placeholder="Phone Number" required>
+        <textarea name="message" placeholder="Describe your cleaning needs" required></textarea>
+        <button type="submit" class="btn-primary">Submit</button>
+    </form>
+</section>
+
+<!-- EMAILJS SCRIPT -->
+<script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+<script type="text/javascript">
+    (function(){
+        emailjs.init("YOUR_PUBLIC_KEY"); // <-- Replace with your EmailJS public key
+    })();
+
+    document.getElementById('contact-form').addEventListener('submit', function(event) {
+        event.preventDefault(); // prevent page reload
+
+        // Send email to your business email
+        emailjs.sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', this)
+            .then(function() {
+                alert('Thank you! Your message has been sent. We will contact you soon.');
+            }, function(error) {
+                alert('Failed to send message. Please try again later.');
+                console.log(error);
+            });
+
+        this.reset(); // clear form
+    });
+</script>
+
+</body>
+</html>
