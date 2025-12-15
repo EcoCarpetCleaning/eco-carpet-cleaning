@@ -148,18 +148,37 @@ nav .nav-links a:hover {
 
 /* GALLERY */
 .gallery-grid {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
 }
 
-.gallery-grid img {
-    width: 100%;
-    max-width: 300px;
+.gallery-item {
+    position: relative;
+    overflow: hidden;
     border-radius: 10px;
-    object-fit: cover;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    text-align: center;
 }
+
+.gallery-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.05);
+}
+
+.gallery-item p {
+    margin-top: 0.5rem;
+    font-weight: 600;
+    color: #333;
+}
+
 
 /* REVIEWS */
 .review-card {
@@ -226,3 +245,4 @@ footer {
         font-size: 2rem;
     }
 }
+
