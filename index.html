@@ -16,13 +16,31 @@
     <ul class="nav-links">
       <li><a href="#services">Services</a></li>
       <li><a href="#pricing">Pricing</a></li>
-      <li><a href="#gallery">Gallery</a></li>
       <li><a href="#reviews">Reviews</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
-    <a href="YOUR_SCHEDULER_LINK" class="btn-schedule" target="_blank">Book Now</a>
+    <!-- Book Now button for phone -->
+    <a href="tel:+16302021763" class="btn-schedule">Call to Book</a>
+    <!-- Optional: Book via email -->
+    <!-- <a href="mailto:ecocarpetservices@gmail.com?subject=Booking Request&body=Hi,%20I%20would%20like%20to%20book%20a%20cleaning." class="btn-schedule">Email to Book</a> -->
   </div>
 </header>
+
+<!-- CONTACT SECTION -->
+<section id="contact" class="section">
+  <div class="container">
+    <h2>Book a Cleaning</h2>
+    <p>You can either call us directly or fill out the form below and we’ll get back to you.</p>
+    <form class="contact-form" action="https://formspree.io/f/mankbldq" method="POST">
+      <input type="text" name="name" placeholder="Full Name" required>
+      <input type="email" name="email" placeholder="Email" required>
+      <input type="text" name="phone" placeholder="Phone Number" required>
+      <textarea name="message" placeholder="Describe your cleaning needs" required></textarea>
+      <button type="submit" class="btn-primary">Submit</button>
+    </form>
+  </div>
+</section>
+
 
 <!-- PRICING SECTION ON TOP -->
 <section id="pricing" class="section">
@@ -127,6 +145,7 @@
 
 </body>
 </html>
+
 
 
 
