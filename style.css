@@ -9,77 +9,168 @@
 }
 
 body {
-  background: #f9f9f9;
-  color: #333;
+  background: #f7f7f7;
+  color: #222;
   line-height: 1.6;
-  padding-top: 90px; /* fixed nav offset */
+  padding-top: 80px; /* fixed nav */
 }
 
 /* =====================
    CONTAINER
 ===================== */
 .container {
-  width: 90%;
+  width: 92%;
   max-width: 1200px;
   margin: 0 auto;
 }
 
 /* =====================
-   NAVIGATION
+   NAVIGATION (LIKE PRODEEP)
 ===================== */
 nav {
-  background: #fff;
+  background: #ffffff;
   position: fixed;
   top: 0;
-  left: 0;
   width: 100%;
   z-index: 999;
-  border-bottom: 1px solid #eaeaea;
+  border-bottom: 1px solid #ddd;
 }
 
 .nav-container {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 15px 0;
+  padding: 14px 0;
 }
 
 .nav-logo {
-  height: 55px;
+  height: 48px;
 }
 
 .nav-links {
   list-style: none;
   display: flex;
-  gap: 20px;
   align-items: center;
+  gap: 18px;
 }
 
 .nav-links a {
   text-decoration: none;
-  color: #333;
+  color: #222;
   font-weight: 500;
-  transition: color 0.3s;
 }
 
 .nav-links a:hover {
-  color: #0a7cdb;
+  color: #007bff;
 }
 
 /* =====================
-   BUTTONS
+   BUTTONS (PRODEEP STYLE)
 ===================== */
 .btn-schedule,
 .btn-primary {
-  background: #0a7cdb;
+  background: #007bff;
   color: #fff !important;
-  padding: 12px 24px;
-  border-radius: 6px;
-  font-weight: 700;
+  padding: 10px 20px;
+  border-radius: 4px;
+  font-weight: 600;
   text-decoration: none;
-  box-shadow: 0 4px 12px rgba(10,124,219,0.3);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .btn-schedule:hover,
-.btn-pr
+.btn-primary:hover {
+  background: #005fc2;
+}
+
+/* =====================
+   HERO (SMALL, CLEAN)
+===================== */
+.hero {
+  background: #ffffff;
+  padding: 50px 0 40px;
+  text-align: center;
+  border-bottom: 1px solid #eaeaea;
+}
+
+.hero-overlay {
+  display: none;
+}
+
+.hero-logo {
+  width: 110px;
+  margin-bottom: 10px;
+}
+
+.hero h1 {
+  font-size: 2.3rem;
+  margin-bottom: 10px;
+}
+
+.hero p {
+  font-size: 1.05rem;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+/* =====================
+   SECTIONS
+===================== */
+.section {
+  padding: 55px 0;
+  scroll-margin-top: 80px;
+}
+
+.section h2 {
+  text-align: center;
+  font-size: 1.9rem;
+  margin-bottom: 30px;
+  color: #111;
+}
+
+.bg-light {
+  background: #ffffff;
+}
+
+/* =====================
+   PRICING (TOP PRIORITY)
+===================== */
+.pricing-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.price-card {
+  background: #fff;
+  padding: 25px 20px;
+  border-radius: 6px;
+  text-align: center;
+  border: 1px solid #ddd;
+}
+
+.price-card h3 {
+  font-size: 1.25rem;
+  margin-bottom: 8px;
+}
+
+.price-card .price {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin: 12px 0;
+  color: #007bff;
+}
+
+/* =====================
+   SERVICES
+===================== */
+.service-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.service-card {
+  background: #fff;
+  padding: 20px;
+  border-radius: 6px;
+  border: 1px solid
